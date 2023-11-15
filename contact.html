@@ -8,18 +8,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
     <div class="header">
         <img class="logo" src="images/Logo.svg" alt="Logo">
-        <nav class="navbar">
-          <a href="index.html" >Home</a> |
-          <a href="packages.html">Package Tours</a> |
-          <a href="/js/">Rediscover Singapore</a> |
-          <a href="/python/">Cruises</a> |
+        <nav class="navbar" id="nav">
+          <a href="index.html">Home</a> 
+          <div class="dropdown">
+              <a href="packages.html">Package Tours</a>
+              <div class="dropdown-menu">
+                  <a href="packages.html">Barcelona</a>
+                  <a href="packages.html">Fukuoka</a>
+                  <a href="packages.html">Glasgow</a>
+              </div>
+          </div> 
+          <a href="/js/">Rediscover Singapore</a> 
+          <a href="/python/">Cruises</a> 
           <a href="contact.html" class="active">Contact Us</a>
-        </nav>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+      </nav>
       </div>
       <div class="video-container">
         <video muted autoplay loop>
@@ -47,9 +58,21 @@
           </form>
         </div>
       </div>
-      <footer>
+      
+      <div class="footer">
         <p>&copy; 2023 World Xplorer. All rights reserved.</p>
-      </footer>
+      </div>
+
+      <script>
+        function myFunction() {
+          var x = document.getElementById("nav");
+          if (x.className === "navbar") {
+            x.className += " responsive";
+          } else {
+            x.className = "navbar";
+          }
+        }
+        </script>
 
 </body>
 </html>
