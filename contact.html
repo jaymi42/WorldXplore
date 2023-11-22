@@ -12,26 +12,24 @@
 
 </head>
 <body>
-    <div class="header">
-        <img class="logo" src="images/Logo.svg" alt="Logo">
-        <nav class="navbar" id="nav">
-          <a href="index.html">Home</a> 
-          <div class="dropdown">
-              <a href="packages.html">Package Tours</a>
-              <div class="dropdown-menu">
-                  <a href="packages.html">Barcelona</a>
-                  <a href="packages.html">Fukuoka</a>
-                  <a href="packages.html">Glasgow</a>
-              </div>
-          </div> 
-          <a href="/js/">Rediscover Singapore</a> 
-          <a href="/python/">Cruises</a> 
-          <a href="contact.html" class="active">Contact Us</a>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-      </nav>
-      </div>
+  <div class="topnav" id="nav">
+    <img class="logo" src="images/Logo.svg" alt="Logo">
+    <a href="index.html">Home</a> 
+    <div class="dropdown">
+        <button class="dropbtn" href="packages.html">Package Tours
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="packages.html">Barcelona</a>
+            <a href="packages.html">Fukuoka</a>
+            <a href="packages.html">Glasgow</a>
+        </div>
+    </div> 
+    <a href="/js/">Rediscover Singapore</a> 
+    <a href="/python/">Cruises</a> 
+    <a href="contact.html" class="active">Contact Us</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
       <div class="video-container">
         <video muted autoplay loop>
           <source src="videos/stadium.mp4" type="video/mp4">
@@ -66,10 +64,10 @@
       <script>
         function myFunction() {
           var x = document.getElementById("nav");
-          if (x.className === "navbar") {
+          if (x.className === "topnav") {
             x.className += " responsive";
           } else {
-            x.className = "navbar";
+            x.className = "topnav";
           }
         }
         </script>
